@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_account"
+    tools:context=".ui.account.AccountFragment">
+
+    //第一行图片
+    <LinearLayout
+        android:id="@+id/linearLayout0"
+        android:layout_width="423dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-500dp"
+        android:layout_marginBottom="10dp"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_baseline_emoji_people_24" />
+
+    </LinearLayout>
+
+    //第二行昵称
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout0">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:textSize="70px"
+            android:textAlignment="center"
+            android:text="："/>
+    </LinearLayout>
+
+    //第三行 第一组功能
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/background_corners"
+        android:orientation="vertical"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/more_activity_item_selector">
+
+            <TextView
+                android:id="@+id/collect"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_star_24"
+                android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="我的收藏"
+                android:textSize="60px" />
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:background="@drawable/more_activity_item_selector">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/trace"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:clickable="true"-->
+<!--                android:drawableLeft="@drawable/ic_baseline_format_list_numbered_24"-->
+<!--                android:drawableRight="@drawable/ic_baseline_chevron_right_24"-->
+<!--                android:drawablePadding="10dp"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:text="我的行程"-->
+<!--                android:textSize="60px" />-->
+
+<!--        </RelativeLayout>-->
+    </LinearLayout>
+
+    //第四行 第二组功能
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/background_corners"
+        android:orientation="vertical"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/more_activity_item_selector">
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_delete_sweep_24"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="修改个人信息"
+                android:textSize="60px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/more_activity_item_selector">
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="退出登录"
+                android:textSize="60px"
+                app:drawableLeftCompat="@drawable/ic_baseline_clear_24"
+                android:focusable="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
